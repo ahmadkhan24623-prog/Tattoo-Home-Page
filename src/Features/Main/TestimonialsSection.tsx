@@ -59,7 +59,6 @@ const TestimonialsSection: React.FC = () => {
   // ================= SCROLL REVEAL ANIMATIONS =================
   useEffect(() => {
     const ctx = gsap.context(() => {
-      // 1. Title group animation
       gsap.fromTo('.reveal-title', 
         { opacity: 0, y: -30 },
         {
@@ -78,7 +77,7 @@ const TestimonialsSection: React.FC = () => {
       gsap.fromTo('.reveal-avatar',
         { opacity: 0, scale: 0.4, y: 20 },
         {
-          opacity: (index) => index === activeIndex ? 1 : 0.35, // Maintains default layout styling on load
+          opacity: (index) => index === activeIndex ? 1 : 0.35, 
           scale: (index) => index === activeIndex ? 1.05 : 0.95,
           y: 0,
           duration: 0.8,
@@ -106,13 +105,13 @@ const TestimonialsSection: React.FC = () => {
             toggleActions: 'play none none none',
           }
         }
-      );
+      ); 
     }, sectionRef);
 
     return () => ctx.revert();
   }, [activeIndex]);
 
-  // =================  CHANGE ANIMATION =================
+  // ================= CHANGE ANIMATION =================
   const animateSlideChange = (nextIndex: number) => {
     if (isAnimating.current || nextIndex === activeIndex) return;
     isAnimating.current = true;
@@ -150,7 +149,13 @@ const TestimonialsSection: React.FC = () => {
       ref={sectionRef} 
       className="w-full relative z-10 select-none overflow-hidden py-24 bg-[#0d0a08]"
     >
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-[#bf987c]/[0.03] blur-[120px] pointer-events-none rounded-full" />
+      {/* ================= BACKGROUND Color ================= */}
+      <div 
+        className="absolute inset-0 bg-cover bg-center bg-no-repeat pointer-events-none z-0 opacity-70 mix-blend-luminosity"
+        style={{ backgroundImage: `url('/Images/BackgroundImage.png')` }}
+      />
+
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-[#bf987c]/[0.04] blur-[130px] pointer-events-none rounded-full z-0" />
 
       <div className="w-full max-w-[1400px] mx-auto px-4 sm:px-8 md:px-16 flex flex-col items-center relative z-10">
         
@@ -200,10 +205,10 @@ const TestimonialsSection: React.FC = () => {
           })}
         </div>
 
-        {/* =================BOX CONTAINER ================= */}
+        {/* ================= BOX CONTAINER ================= */}
         <div className="reveal-card w-full max-w-[850px] relative opacity-0">
           
-          <div className="w-full bg-[#14110f] border border-[#2b231d]/70 rounded-[32px] p-8 sm:p-14 md:px-20 min-h-[240px] sm:min-h-[220px] flex flex-col justify-center items-center text-center relative shadow-[0_30px_60px_rgba(0,0,0,0.6)] group hover:border-[#bf987c]/20 transition-all duration-500">
+          <div className="w-full bg-[#14110f]/90 backdrop-blur-sm border border-[#2b231d]/70 rounded-[32px] p-8 sm:p-14 md:px-20 min-h-[240px] sm:min-h-[220px] flex flex-col justify-center items-center text-center relative shadow-[0_30px_60px_rgba(0,0,0,0.6)] group hover:border-[#bf987c]/20 transition-all duration-500">
             
             <span className="absolute top-6 left-10 text-[80px] text-[#bf987c]/[0.04] font-serif pointer-events-none select-none">“</span>
             

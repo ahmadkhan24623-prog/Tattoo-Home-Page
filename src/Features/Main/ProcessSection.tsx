@@ -40,9 +40,14 @@ const ProcessSection: React.FC = () => {
   return (
     <div 
       ref={containerRef}
-      className="w-full relative z-10 select-none overflow-hidden py-12 sm:py-20 bg-cover bg-center bg-no-repeat"
-      style={{ backgroundImage: "url('/Images/BackgroundImage.png')" }}
+      className="w-full relative z-10 select-none overflow-hidden py-12 sm:py-20 bg-[#0d0a08]"
     >
+      {/* =================BACKGROUND Color ================= */}
+      <div 
+        className="absolute inset-0 bg-cover bg-center bg-no-repeat pointer-events-none z-0 opacity-100 mix-blend-luminosity"
+        style={{ backgroundImage: "url('/Images/BackgroundImage.png')" }}
+      />
+
       <div className="absolute inset-0 bg-gradient-to-b from-[#0d0a08]/90 via-[#0d0a08]/40 to-[#0d0a08]/90 pointer-events-none z-0" />
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,transparent_20%,#0d0a08_85%)] pointer-events-none z-0" />
 
@@ -50,7 +55,7 @@ const ProcessSection: React.FC = () => {
        
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 auto-rows-auto md:auto-rows-[300px] lg:auto-rows-[320px]">
           
-          {/* ================= CARD 1: TAILORED PROCESS (LEFT TALL) ================= */}
+          {/* ================= CARD 1 ================= */}
           <div className="process-card md:row-span-2 min-h-[460px] md:min-h-0 bg-[#14110f] border border-[#2b231d] rounded-[40px] p-8 sm:p-10 flex flex-col justify-between overflow-hidden relative group shadow-[0_20px_50px_rgba(0,0,0,0.5)] transition-all duration-500 hover:border-[#bf987c]/40">
             <div className="absolute inset-0 bg-gradient-to-b from-[#bf987c]/[0.02] to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" />
             <div className="flex flex-col gap-4 relative z-10">
@@ -61,7 +66,6 @@ const ProcessSection: React.FC = () => {
                 happy!
               </h3>
             </div>
-            {/* Height scales gracefully dynamically via aspect-video on mobile, returns to fixed size on desktop */}
             <div className="w-full aspect-video md:aspect-auto md:h-[50%] mt-6 overflow-hidden rounded-[24px] relative z-10 border border-[#2b231d] bg-[#1a1613]">
               <img 
                 src="/Images/CardIamge1.png" 
@@ -71,7 +75,7 @@ const ProcessSection: React.FC = () => {
             </div>
           </div>
 
-          {/* ================= CARD 2: GORILLA WITH HAT (CENTER TOP) ================= */}
+          {/* ================= CARD 2: (CENTER TOP) ================= */}
           <div className="process-card min-h-[180px] md:min-h-0 bg-[#f5ebe2] border border-[#2b231d] rounded-[40px] p-6 sm:p-8 flex items-center justify-between overflow-hidden relative group shadow-[0_20px_50px_rgba(0,0,0,0.3)] transition-all duration-500 hover:shadow-[0_25px_60px_rgba(191,152,124,0.15)]">
             <div className="w-[50%] sm:w-[55%] h-full flex items-center justify-center bg-[#0d0a08]/[0.02] rounded-3xl p-2">
               <img 
@@ -86,8 +90,7 @@ const ProcessSection: React.FC = () => {
             </div>
           </div>
 
-          {/* ================= CARD 3: IMAGE LIVE ACTION (RIGHT TOP) ================= */}
-          {/* Changed height on mobile to keep a crisp rectangular aspect ratio rather than collapsing */}
+          {/* ================= CARD 3:  (RIGHT TOP) ================= */}
           <div className="process-card min-h-[220px] md:min-h-0 bg-[#14110f] border border-[#2b231d] rounded-[40px] overflow-hidden relative group shadow-[0_20px_50px_rgba(0,0,0,0.5)] transition-all duration-500 hover:border-[#bf987c]/30">
             <img 
               src="/Images/CardImage3.png" 
@@ -100,7 +103,7 @@ const ProcessSection: React.FC = () => {
             </div>
           </div>
 
-          {/* ================= CARD 4: SNAKE SKULL (CENTER BOTTOM) ================= */}
+          {/* ================= CARD 4: (CENTER BOTTOM) ================= */}
           <div className="process-card min-h-[180px] md:min-h-0 bg-[#f5ebe2] border border-[#2b231d] rounded-[40px] p-6 sm:p-8 flex items-center justify-between overflow-hidden relative group shadow-[0_20px_50px_rgba(0,0,0,0.3)] transition-all duration-500 hover:shadow-[0_25px_60px_rgba(191,152,124,0.15)]">
             <div className="w-[55%] h-full flex items-center justify-center bg-[#0d0a08]/[0.02] rounded-3xl p-2">
               <img 
@@ -115,7 +118,7 @@ const ProcessSection: React.FC = () => {
             </div>
           </div>
 
-          {/* ================= CARD 5: HIGHEST RATED CLUB (RIGHT BOTTOM) ================= */}
+          {/* ================= CARD 5:(RIGHT BOTTOM) ================= */}
           <div className="process-card min-h-[260px] md:min-h-0 bg-[#14110f] border border-[#2b231d] rounded-[40px] p-6 sm:p-10 pb-8 sm:pb-10 flex flex-col justify-start group shadow-[0_20px_50px_rgba(0,0,0,0.5)] transition-all duration-500 hover:border-[#bf987c]/40 relative overflow-hidden">
             <div className="absolute inset-0 bg-gradient-to-b from-transparent to-[#bf987c]/[0.01] opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" />
             

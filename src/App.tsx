@@ -1,7 +1,10 @@
 import { BrowserRouter as Router } from 'react-router-dom';
 import NavBar from './Features/Navbar/navBar';
 import AppRoutes from './AppRoutes';
-import TestimonialsSection from './Features/Main/TestimonialsSection'; // Imported here
+import ProcessSection from './Features/Main/ProcessSection'; 
+import TestimonialsSection from './Features/Main/TestimonialsSection'; 
+import FaqSection from './Features/Main/FaqSection'; 
+import Footer from './Features/Footer/Footer';
 import './App.css';
 
 function App() {
@@ -20,11 +23,17 @@ function App() {
           <NavBar />
           
           <main className="w-full flex-grow flex flex-col items-center justify-center">
-            {/* Core page layouts & grids (ProcessSection, etc.) */}
+            {/* Main view layouts & routing */}
             <AppRoutes />
 
-            {/* Premium Testimonials Slider Section */}
+            {/* Testimonials Slider Section */}
             <TestimonialsSection />
+
+            {/* FAQ Section */}
+            <FaqSection />
+
+            {/* Premium Modular Footer (Includes the Newsletter Card automatically) */}
+            <Footer />
           </main>
         </div>
 
