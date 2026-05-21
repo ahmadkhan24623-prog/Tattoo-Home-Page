@@ -2,12 +2,14 @@ import React from 'react';
 import { Routes, Route } from 'react-router-dom';
 import HeroSection from './Features/Main/HeroSection';
 import LogoBar from './Features/Main/LogoBar'; 
+import ProcessSection from './Features/Main/ProcessSection'; 
 
 const Home = () => {
   return (
     <div className="w-full flex flex-col justify-start items-center">
       <HeroSection />
       <LogoBar /> 
+      <ProcessSection /> 
     </div>
   );
 };

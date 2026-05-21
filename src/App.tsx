@@ -1,6 +1,7 @@
 import { BrowserRouter as Router } from 'react-router-dom';
 import NavBar from './Features/Navbar/navBar';
 import AppRoutes from './AppRoutes';
+import TestimonialsSection from './Features/Main/TestimonialsSection'; // Imported here
 import './App.css';
 
 function App() {
@@ -17,8 +18,13 @@ function App() {
         {/* Core Content Layer */}
         <div className="relative z-10 w-full flex flex-col flex-grow">
           <NavBar />
-          <main className="w-full flex-grow flex items-center justify-center">
+          
+          <main className="w-full flex-grow flex flex-col items-center justify-center">
+            {/* Core page layouts & grids (ProcessSection, etc.) */}
             <AppRoutes />
+
+            {/* Premium Testimonials Slider Section */}
+            <TestimonialsSection />
           </main>
         </div>
 
