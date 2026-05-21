@@ -6,7 +6,6 @@ import './App.css';
 function App() {
   return (
     <Router>
-      {/* Cleaned up the weird characters inside className here */}
       <div className="min-h-screen w-full bg-[#0d0a08] text-gray-200 overflow-x-hidden font-sans relative flex flex-col">
         
         {/* Background Texture Overlay */}
