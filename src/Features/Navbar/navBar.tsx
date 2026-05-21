@@ -72,12 +72,12 @@ const NavBar: React.FC = () => {
       className="w-full md:min-h-[180px] min-h-[110px] bg-cover bg-top bg-no-repeat flex flex-col justify-start items-center pt-6 md:pt-8 px-4 select-none relative z-50"
       style={{ backgroundImage: `url('/Images/BackgroundImage.png')` }}
     >
-      {/* Navigation Capsule Bar Container */}
+      {/* Navigation  */}
       <div 
         ref={navRef}
         className="w-full max-w-[1100px] h-[60px] md:h-[70px] bg-[#1a1512]/80 backdrop-blur-md rounded-full border border-[#2d251e] flex items-center justify-between px-6 md:px-12 shadow-2xl relative z-50"
       >
-        {/* DESKTOP ONLY: Left Side Links */}
+        {/*  Left Side Links */}
         <div className="hidden md:flex items-center gap-10 w-[40%] justify-end">
           {leftLinks.map((link, idx) => (
             <Link
@@ -93,7 +93,7 @@ const NavBar: React.FC = () => {
           ))}
         </div>
 
-        {/* CENTER RESPONSIVE LOGO AREA */}
+        {/* CENTER  LOGO AREA */}
         <div className="flex md:justify-center justify-start items-center w-auto md:w-[15%]">
           <Link to="/">
             <img 
@@ -107,7 +107,7 @@ const NavBar: React.FC = () => {
           </Link>
         </div>
 
-        {/* DESKTOP ONLY: Right Side Links */}
+        {/*  Right Side Links */}
         <div className="hidden md:flex items-center gap-10 w-[40%] justify-start">
           {rightLinks.map((link, idx) => (
             <Link
@@ -123,7 +123,7 @@ const NavBar: React.FC = () => {
           ))}
         </div>
 
-        {/* MOBILE ONLY: Hamburger Trigger Button */}
+        {/* Hamburger Trigger Button */}
         <button 
           onClick={() => setIsOpen(!isOpen)}
           className="md:hidden flex flex-col justify-center items-center gap-1.5 w-8 h-8 focus:outline-none"
@@ -135,7 +135,6 @@ const NavBar: React.FC = () => {
         </button>
       </div>
 
-      {/* MOBILE MENU ACCORDION: Drops down when active */}
       <div 
         ref={menuRef}
         className="md:hidden w-full max-w-[calc(100%-2rem)] bg-[#1a1512]/95 border border-[#2d251e] rounded-2xl mt-2 overflow-hidden px-6 opacity-0 h-0 flex flex-col items-center justify-center shadow-2xl backdrop-blur-lg relative z-40"

@@ -12,13 +12,13 @@ function App() {
     <Router>
       <div className="min-h-screen w-full bg-[#0d0a08] text-gray-200 overflow-x-hidden font-sans relative flex flex-col">
         
-        {/* Background Texture Overlay */}
+        {/* Background Color */}
         <div 
           className="absolute inset-0 bg-cover bg-center bg-no-repeat bg-fixed pointer-events-none z-0 opacity-15"
           style={{ backgroundImage: `url('/Images/BackgroundImage.png')` }}
         />
 
-        {/* Core Content Layer */}
+        {/*  Content Layer */}
         <div className="relative z-10 w-full flex flex-col flex-grow">
           <NavBar />
           
@@ -26,13 +26,12 @@ function App() {
             {/* Main view layouts & routing */}
             <AppRoutes />
 
-            {/* Testimonials Slider Section */}
+            {/*  Slider Section */}
             <TestimonialsSection />
 
             {/* FAQ Section */}
             <FaqSection />
 
-            {/* Premium Modular Footer (Includes the Newsletter Card automatically) */}
             <Footer />
           </main>
         </div>

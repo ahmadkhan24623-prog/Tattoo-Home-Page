@@ -6,7 +6,7 @@ const NewsletterCard: React.FC = () => {
   return (
     <div className="w-full max-w-[1000px] bg-[#fdfaf4] rounded-[32px] p-10 md:p-16 flex flex-col md:flex-row items-center justify-between gap-12 shadow-[0_40px_80px_-20px_rgba(0,0,0,0.3)] border border-white/50 relative overflow-hidden">
       
-      {/* Background Subtle Gradient */}
+      {/* Background Color */}
       <div className="absolute inset-0 bg-gradient-to-tr from-[#bf987c]/5 to-transparent pointer-events-none" />
 
       {/* Left: Asset */}

@@ -74,11 +74,9 @@ const LogoBar: React.FC = () => {
   ];
 
   return (
-    /* Changed outer padding to px-4 on mobile and md:px-16 on desktop */
     <div className="w-full px-4 md:px-16 max-w-full mx-auto mt-2 mb-16 relative z-10">
       <div 
         ref={barRef}
-        /* Changed to flex-wrap with a responsive layout gap for flawless multi-row wrapping on small devices */
         className="w-full bg-[#161311]/90 border border-[#2b2420] rounded-2xl py-6 px-6 md:px-16 flex flex-wrap items-center justify-center md:justify-between gap-y-6 gap-x-10 md:gap-x-0 backdrop-blur-md shadow-2xl"
       >
         {brands.map((brand) => (
