@@ -8,11 +8,9 @@ const NavBar: React.FC = () => {
   const menuRef = useRef<HTMLDivElement>(null);
   const linksRef = useRef<HTMLAnchorElement[]>([]);
   
-  // State to track if mobile menu curtain is dropped open
   const [isOpen, setIsOpen] = useState(false);
 
   useEffect(() => {
-    // Top-down entrance sequence
     gsap.fromTo(
       navRef.current,
       { y: -50, opacity: 0 },
@@ -26,7 +24,6 @@ const NavBar: React.FC = () => {
     );
   }, []);
 
-  // Handle mobile menu slide animation when state toggles
   useEffect(() => {
     if (isOpen) {
       gsap.to(menuRef.current, { height: 'auto', opacity: 1, duration: 0.5, ease: 'power3.out' });
