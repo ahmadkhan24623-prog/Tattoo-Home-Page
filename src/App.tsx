@@ -1,7 +1,7 @@
 import { BrowserRouter as Router } from 'react-router-dom';
 import NavBar from './Features/Navbar/navBar';
 import AppRoutes from './AppRoutes';
-import ProcessSection from './Features/Main/ProcessSection'; 
+// import ProcessSection from './Features/Main/ProcessSection'; 
 import TestimonialsSection from './Features/Main/TestimonialsSection'; 
 import FaqSection from './Features/Main/FaqSection'; 
 import Footer from './Features/Footer/Footer';
